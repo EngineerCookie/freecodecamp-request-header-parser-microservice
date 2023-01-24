@@ -1,32 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 18px;
+	/*#######
+	VARIABLES
+	#########*/
+	/*Color*/
+	/*color-main black*/
+	--color-main-h: 0;
+	--color-main-s: 0%;
+	--color-main-l: 0%;
+	/*color-bg lavenderish*/
+	--color-bg-h: 243;
+	--color-bg-s: 77%;
+	--color-bg-l: 79%;
+	/*FONT*/
+	--ff: 'Kanit', sans-serif;
+	--fs-l: 2.4rem;
+	--fs-m: 1.6rem;
+	--fs-s: 1rem;
+}
+
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #FaFaFa;
+	font-family: var(--ff);
+	color: hsl(var(--color-main-h), var(--color-main-s), var(--color-main-l));
+	background-color: hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l));
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+h1 {
+  font-size: var(--fs-l);
+}
+
+.whoami {
 	text-align: center;
-	line-height: 1.4em;
 }
 
-.container {
-	padding: 0;
-	margin-top: 40px;
+.whoami > a{
+	font-size: var(--fs-m);
+	color: inherit;
+	text-decoration: none;
+	border: solid hsl(var(--color-main-h), var(--color-main-s), var(--color-main-l)) 1px;
+	padding: 0.5rem 1rem;
+	border-radius: 25px;
 }
 
-h3 {
-  margin-top: 30px;
+.whoami > a:hover {
+	--color-bg-l: 70%;
+	background-color: hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l));
 }
 
-.footer {
-	margin-top: 40px;
+.whoami > a:visited{
+	color: inherit;
 }
 
-code {
-  font-family: monospace;
-  padding: 2px;
-  color: black;
-  background-color: #fff;
+.attribution {
+	font-size: var(--fs-s);
 }
 
-a {
-	color: #2574A9;
+.attribution > a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.attribution > a:visited {
+	color:  inherit;
 }
